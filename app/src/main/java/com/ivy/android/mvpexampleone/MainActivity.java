@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        API_KEY = getResources().getString(R.string.default_account_id);
         // Configure Retrofit
         Retrofit retrofit = new Retrofit.Builder()
                 // Base URL can change for endpoints (dev, staging, live..)

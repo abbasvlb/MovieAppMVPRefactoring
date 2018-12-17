@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+def Properties properties = new Properties()
+properties.load(project.rootProject.file("local.properties").newDataInputStream())
+
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -9,6 +13,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        resValue "string", "default_account_id", properties.getProperty("default.key", "")
     }
     buildTypes {
         release {
@@ -26,7 +31,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 
     // butter knife
-    compile 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     // Recycler view
