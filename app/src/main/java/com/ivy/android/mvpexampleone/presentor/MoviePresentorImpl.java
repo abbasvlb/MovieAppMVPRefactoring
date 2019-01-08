@@ -20,7 +20,7 @@ public class MoviePresentorImpl implements MoviePresentor {
     private MovieInteractor movieInteractor;
     private MovieView movieView;
 
-    @Inject
+
     public MoviePresentorImpl(MovieInteractor movieInteractor){
         this.movieInteractor=movieInteractor;
     }
