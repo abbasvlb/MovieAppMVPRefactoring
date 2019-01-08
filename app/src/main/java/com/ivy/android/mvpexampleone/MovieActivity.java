@@ -8,12 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.ivy.android.mvpexampleone.di.AppComponent;
+import com.ivy.android.mvpexampleone.model.App;
 import com.ivy.android.mvpexampleone.model.Movie;
 import com.ivy.android.mvpexampleone.model.MovieInteractorImpl;
 import com.ivy.android.mvpexampleone.presentor.MoviePresentor;
 import com.ivy.android.mvpexampleone.presentor.MoviePresentorImpl;
 
 import java.util.List;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,7 +34,9 @@ public class MovieActivity extends AppCompatActivity implements MovieView {
     @BindView(R.id.textView)
     TextView textNoDataFound;
 
+    @Inject
     MoviePresentor moviePresentor;
+
 
 
     @Override
@@ -40,8 +46,8 @@ public class MovieActivity extends AppCompatActivity implements MovieView {
 
         ButterKnife.bind(this);
 
-
-        moviePresentor = new MoviePresentorImpl(new MovieInteractorImpl(getResources().getString(R.string.default_account_id)));
+        //moviePresentor = new MoviePresentorImpl(new MovieInteractorImpl(getResources().getString(R.string.default_account_id)));
+        ((App) getApplication()).getAppComponent().inject(this);
         moviePresentor.bindView(this);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
