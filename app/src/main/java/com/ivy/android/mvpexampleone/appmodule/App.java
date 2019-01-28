@@ -1,9 +1,9 @@
-package com.ivy.android.mvpexampleone.model;
+package com.ivy.android.mvpexampleone.appmodule;
 
 import android.app.Application;
 
-import com.ivy.android.mvpexampleone.di.AppComponent;
-import com.ivy.android.mvpexampleone.di.DaggerAppComponent;
+import com.ivy.android.mvpexampleone.screens.moviesListing.di.AppComponent;
+import com.ivy.android.mvpexampleone.screens.moviesListing.di.DaggerAppComponent;
 
 public class App extends Application {
     private AppComponent appComponent;

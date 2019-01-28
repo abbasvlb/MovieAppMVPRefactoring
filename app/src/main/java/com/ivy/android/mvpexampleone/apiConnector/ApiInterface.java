@@ -1,4 +1,4 @@
-package com.ivy.android.mvpexampleone.model;
+package com.ivy.android.mvpexampleone.apiConnector;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

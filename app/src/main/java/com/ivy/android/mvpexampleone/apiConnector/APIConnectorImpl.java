@@ -1,16 +1,16 @@
-package com.ivy.android.mvpexampleone.model;
+package com.ivy.android.mvpexampleone.apiConnector;
 
-import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MovieInteractorImpl implements MovieInteractor {
+public class APIConnectorImpl implements APIConnector {
 
     private ApiInterface apiService;
     private String BASE_URL = "https://api.themoviedb.org/3/";
-    private String API_KEY = "";
+    public String API_KEY = "";
 
-    public MovieInteractorImpl(String key){
+
+    public APIConnectorImpl(String key){
 
         API_KEY = key;
 
@@ -30,8 +30,12 @@ public class MovieInteractorImpl implements MovieInteractor {
     }
 
     @Override
-    public Call<MovieResponse> fetch() {
-        return apiService.getTopRatedMovies(API_KEY);
+    public ApiInterface getAPIService() {
+        return apiService;
+    }
 
+    @Override
+    public String getAPIkey() {
+        return API_KEY;
     }
 }

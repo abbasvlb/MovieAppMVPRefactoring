@@ -1,4 +1,4 @@
-package com.ivy.android.mvpexampleone.model;
+package com.ivy.android.mvpexampleone.screens.moviesListing.model;
 
 
 import com.google.gson.annotations.SerializedName;

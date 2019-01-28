@@ -1,4 +1,4 @@
-package com.ivy.android.mvpexampleone;
+package com.ivy.android.mvpexampleone.screens.moviesListing;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,12 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.ivy.android.mvpexampleone.di.AppComponent;
-import com.ivy.android.mvpexampleone.model.App;
-import com.ivy.android.mvpexampleone.model.Movie;
-import com.ivy.android.mvpexampleone.model.MovieInteractorImpl;
-import com.ivy.android.mvpexampleone.presentor.MoviePresentor;
-import com.ivy.android.mvpexampleone.presentor.MoviePresentorImpl;
+import com.ivy.android.mvpexampleone.R;
+import com.ivy.android.mvpexampleone.appmodule.App;
+import com.ivy.android.mvpexampleone.screens.moviesListing.model.Movie;
+import com.ivy.android.mvpexampleone.screens.moviesListing.presentor.MoviePresentor;
 
 import java.util.List;
 

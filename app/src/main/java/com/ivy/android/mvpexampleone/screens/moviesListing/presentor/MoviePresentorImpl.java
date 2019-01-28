@@ -1,11 +1,11 @@
-package com.ivy.android.mvpexampleone.presentor;
+package com.ivy.android.mvpexampleone.screens.moviesListing.presentor;
 
 import android.util.Log;
 
-import com.ivy.android.mvpexampleone.MovieView;
-import com.ivy.android.mvpexampleone.model.Movie;
-import com.ivy.android.mvpexampleone.model.MovieInteractor;
-import com.ivy.android.mvpexampleone.model.MovieResponse;
+import com.ivy.android.mvpexampleone.screens.moviesListing.MovieView;
+import com.ivy.android.mvpexampleone.screens.moviesListing.model.Movie;
+import com.ivy.android.mvpexampleone.screens.moviesListing.model.MovieInteractor;
+import com.ivy.android.mvpexampleone.apiConnector.MovieResponse;
 
 import java.util.List;
 
