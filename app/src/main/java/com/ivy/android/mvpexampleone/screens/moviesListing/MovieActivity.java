@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ivy.android.mvpexampleone.R;
-import com.ivy.android.mvpexampleone.appmodule.App;
+import com.ivy.android.mvpexampleone.appmodule.BaseApplication;
 import com.ivy.android.mvpexampleone.screens.moviesListing.model.Movie;
 import com.ivy.android.mvpexampleone.screens.moviesListing.presentor.MoviePresentor;
 
@@ -45,7 +45,7 @@ public class MovieActivity extends AppCompatActivity implements MovieView {
         ButterKnife.bind(this);
 
         //moviePresentor = new MoviePresentorImpl(new MovieInteractorImpl(getResources().getString(R.string.default_account_id)));
-        ((App) getApplication()).getAppComponent().inject(this);
+        ((BaseApplication) getApplication()).createMovieComponent().inject(this);
         moviePresentor.bindView(this);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

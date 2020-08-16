@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name="com.ivy.android.mvpexampleone.appmodule.App"
+        android:name="com.ivy.android.mvpexampleone.appmodule.BaseApplication"
         android:theme="@style/AppTheme">
         <activity android:name=".screens.moviesListing.MovieActivity">
             <intent-filter>

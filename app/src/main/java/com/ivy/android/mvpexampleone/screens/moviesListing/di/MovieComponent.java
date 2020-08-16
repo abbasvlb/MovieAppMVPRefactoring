@@ -5,9 +5,10 @@ import com.ivy.android.mvpexampleone.screens.moviesListing.MovieActivity;
 import javax.inject.Singleton;
 
 import dagger.Component;
+import dagger.Subcomponent;
 
-@Singleton
-@Component(modules = MovieModule.class)
-public interface AppComponent {
+
+@Subcomponent(modules = MovieModule.class)
+public interface MovieComponent {
     void inject(MovieActivity activity);
 }

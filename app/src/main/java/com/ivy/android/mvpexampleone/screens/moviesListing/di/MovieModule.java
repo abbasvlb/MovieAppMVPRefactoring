@@ -16,12 +16,6 @@ import dagger.Provides;
 public class MovieModule {
 
     @Provides
-    @Singleton
-    public APIConnector providesAPIConnector(){
-        return new APIConnectorImpl("4c87c0fa03d00ee500e08763b0432f65");
-    }
-
-    @Provides
     public MovieInteractor providesBooksInteractor(MovieInteractorImpl movieInteractor) {
         return movieInteractor;
     }
